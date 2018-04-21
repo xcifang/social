@@ -6,9 +6,9 @@ AV.Cloud.define('test', function(request) {
 	
 	focus.set('user_id', 1);
 	focus.set('focus_user_id', 2);
-	focus.save().then(function(){
+	focus.save().then(function(focus){
 		return "success";	
-	}, function(){
-		return "error";
+	}, function(error){
+		return error;
 	});
 });
